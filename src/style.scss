@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Montserrat:wght@100;600&family=Roboto:wght@300&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.loader {
+  overflow: hidden;
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background: #65abf8;
+  background: -moz-linear-gradient(left, #65abf8 10%, rgba(101, 171, 248, 0) 42%);
+  background: -webkit-linear-gradient(left, #65abf8 10%, rgba(101, 171, 248, 0) 42%);
+  background: -o-linear-gradient(left, #65abf8 10%, rgba(101, 171, 248, 0) 42%);
+  background: -ms-linear-gradient(left, #65abf8 10%, rgba(101, 171, 248, 0) 42%);
+  background: linear-gradient(to right, #65abf8 10%, rgba(101, 171, 248, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #65abf8;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+
+.loader:after {
+  background: white;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.logo {
+  color: #E31F24;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.userName {
+  color: #333;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#mainPage {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 2%;
+
+  #mainPage_header {
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 46px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #mainPage_mainBlock {
+    display: flex;
+    width: 90%;
+    min-height: 575px;
+    margin-left: 5%;
+    margin-top: 40px;
+    border-radius: 10px;
+    background: #FDFDFD;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+  }
+
+  #mainPage_sideBur {
+    width: 20%;
+    border-right: solid 1px #bbbaba;
+    padding-bottom: 2%;
+  }
+
+  #mainPage_serchBlock {
+    width: 80%;
+    padding-left: 20px;
+    padding-top: 27px;
+
+    #mainPage_search-form {
+      width: 90%;
+    }
+
+    input {
+      display: flex;
+      width: 85%;
+      padding: 16px;
+      align-items: center;
+      gap: 16px;
+      border-radius: 8px;
+      border: 1.5px solid var(--all-colors-gray-gray-200, #E9ECEF);
+      background: var(--all-colors-black-white-white, #FFF);
+    }
+  }
+
+  .mainPage_text {
+    width: 80%;
+    color: #333;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+  #mainPage_showBlock {
+    width: 80%;
+    padding-left: 20px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    p {
+      color: #76787D;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+    }
+
+    #mainPage_items {
+      width: 100%;
+
+      .mainPage_item {
+        display: flex;
+        width: 100%;
+        height: 70px;
+        border-radius: 10px;
+        background: #FFF;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+        margin-top: 4%;
+        cursor: pointer;
+
+
+        .mainPage_image {
+          img {
+          width: 70px;
+          height: 70px;
+          border-radius: 10px;
+          }
+        }
+
+        .mainPage_itemText {
+          padding-left: 5%;
+          width: 60%;
+          overflow: hidden;
+
+          h2 {
+            width: 300px;
+            height: 10px;
+            color: #333;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 30px;
+          }
+
+          p {
+            width: 90%;
+            color: #76787D;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+
+        }
+
+       
+
+      
+      }
+
+      .mainPage_item_active{
+        background-color: #E0E0E0;
+      }
+
+
+
+    }
+  }
+
+  #mainPage_profileUser {
+    width: 80%;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 1058px) {
+  #mainPage_profileUser {
+    width: 70%;
+  }
+
+  #mainPage {
+    #mainPage_sideBur {
+      width: 30%;
+      border-right: solid 1px #bbbaba;
+    }
+
+    #mainPage_serchBlock {
+      width: 80%;
+      padding-left: 10px;
+      padding-top: 27px;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #mainPage {
+    #mainPage_mainBlock {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 44px;
+      margin-bottom: 44px;
+      border-radius: 10px;
+      background: #FDFDFD;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+    }
+
+    #mainPage_sideBur {
+      width: 90%;
+      border-right: none;
+    }
+
+    #mainPage_serchBlock {
+      width: 90%;
+      padding-left: 20px;
+      padding-top: 27px;
+    }
+
+    #mainPage_search-form {
+      width: 90%;
+    }
+
+    #mainPage_showBlock {
+      width: 90%;
+      padding-left: 20px;
+      padding-top: 22px;
+    }
+
+    #mainPage_showBlock p {
+      color: #76787D;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .mainPage_item {
+      display: flex;
+      width: 100%;
+      height: 70px;
+      border-radius: 10px;
+      background: #FFF;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+    }
+  }
+}
